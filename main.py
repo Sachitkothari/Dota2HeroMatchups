@@ -1,6 +1,9 @@
 import HeroMatchups
+import HeroFromHeroID
 import json
+import string
 
-num = int(input("Enter a heroID: "))
+hero_name = input("Enter a hero: ")
+num = HeroFromHeroID.heroID_from_hero(hero_name)
 matchups = HeroMatchups.get_hero_matchups(num)
 print(matchups[:5])
